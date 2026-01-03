@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HZ Admin Panel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="admin-header">
+      <h1>HZ Admin</h1>
+      <button onclick="logoutAdmin()">Logout</button>
+    </header>
+
+    <main class="admin-container">
+      <section class="admin-info">
+        <h2>Manage Products</h2>
+        <p>Only admin can edit or delete products.</p>
+      </section>
+      <section id="adminProducts"></section>
+      <p class="empty-admin" id="emptyAdmin" style="display: none">
+        No products found.
+      </p>
+    </main>
+
+    <div class="adminpg-bg" id="adminModal">
+      <div class="adminpg">
+        <h3>Edit Product</h3>
+        <input type="text" id="modalTitle" placeholder="Product Name" />
+        <input type="number" id="modalPrice" placeholder="Price PKR" />
+        <input type="text" id="modalImage" placeholder="Image URL" />
+        <div style="margin-top: 10px; display: flex; gap: 10px">
+          <button id="saveProduct">Save</button>
+          <button id="closeModal">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
